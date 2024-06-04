@@ -83,6 +83,6 @@ You just need to substitute `YOUR_URL` with the URL of the website you want to s
 
 ## Contribution
 
-If you want to contribute to this project, please follow the instructions in the CONTRIBUTING.md file.
+If you want to contribute to this project, please follow the instructions in the [CONTRIBUTING.md](https://github.com/PB2204/py-portip/blob/main/CONTRIBUTING.md)] file.
 
 Happy Hacking! 🚀
