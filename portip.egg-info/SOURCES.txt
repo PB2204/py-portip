@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+portip/__init__.py
+portip/portip.py
+portip.egg-info/PKG-INFO
+portip.egg-info/SOURCES.txt
+portip.egg-info/dependency_links.txt
+portip.egg-info/entry_points.txt
+portip.egg-info/top_level.txt
