@@ -1,0 +1,7 @@
+socket
+threading
+argparse
+os
+platform
+queue
+datetime
