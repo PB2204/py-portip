@@ -52,37 +52,64 @@ portip/
 
 ## Usage
 
-After installing the package, create a new Python (.py) file in the same folder where you're working on your project.
+After installing the package, you can use the following commands in your terminal or command prompt:
 
-Copy the following lines of code to your .py file:
+#### Ping a Website:
 
-```python
-from portip.portip import ping_website, scan_all_ports
+To ping a website and check its connectivity, use the following command:
 
-# Define the website URL
-url = "YOUR_URL"
-
-# Number of ping requests
-num_requests = 4
-
-# Ping the website
-ping_website(url, num_requests)
-
-# Resolve IP address
-ip = socket.gethostbyname(url)
-
-# Define the port range to scan
-start_port = 1
-end_port = 1024
-
-# Scan ports
-scan_all_ports(ip, start_port, end_port)
+```bash
+python3 -m portip.portip 1 --url google.com
 ```
 
-You just need to substitute `YOUR_URL` with the URL of the website you want to scan. This will ping the website and scan ports from 1 to 1024.
+This command will ping `google.com` with the default number of requests (4 by default).
+
+#### Scan for Open Ports:
+
+To scan a website for open ports, use the following command:
+
+```bash
+python3 -m portip.portip 2 --url google.com
+```
+
+This command will scan `google.com` for open ports using the default settings (scanning ports 1 to 1000 with 100 threads).
+
+#### Advanced Scanning Features:
+
+You can enable advanced scanning features to improve port scanning accuracy. Use the `--advanced` flag with the scan command:
+
+```bash
+python3 -m portip.portip 2 --url google.com --advanced
+```
+
+This command will enable advanced scanning features while scanning `google.com` for open ports.
+
+#### Specify Port Range:
+
+If you want to specify a custom port range (e.g., ports 1-1000), use the `--port-range` option:
+
+```bash
+python3 -m portip.portip 2 --url google.com --port-range 1-1000
+```
+
+This command will scan `google.com` for open ports within the specified port range.
+
+#### Adjust Number of Threads:
+
+To change the number of threads used for port scanning, use the `--threads` option:
+
+```bash
+python3 -m portip.portip 2 --url google.com --threads 50
+```
+
+This command will scan `google.com` for open ports using 50 threads instead of the default 100.
+
+Replace `google.com` with the URL of the website you want to ping or scan. Adjust the command-line options as needed to customize the behavior of the PortIP tool.
+
+Feel free to reach out if you have any questions or encounter any issues!
 
 ## Contribution
 
-If you want to contribute to this project, please follow the instructions in the [CONTRIBUTING.md](https://github.com/PB2204/py-portip/blob/main/CONTRIBUTING.md)] file.
+If you want to contribute to this project, please follow the instructions in the [CONTRIBUTING.md](https://github.com/PB2204/py-portip/blob/main/CONTRIBUTING.md) file.
 
 Happy Hacking! 🚀
