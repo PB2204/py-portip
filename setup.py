@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '1.0.0'
+VERSION = '1.1.0'
 DESCRIPTION = 'A simple IP and port scanner tool.'
 LONG_DESCRIPTION = 'PortIP is a Python package that allows you to ping websites and scan for open ports.'
 
